@@ -1,0 +1,38 @@
+name: Advent2017
+version: 0.1.0
+synopsis: Solutions to the Advent 2017 challenges
+description: See README.md
+maintainer: James King <james@agentultra.com>
+license: MIT
+category: Tools
+
+ghc-options: -Wall -threaded
+
+default-extensions: NoImplicitPrelude
+
+dependencies:
+  - base >= 4.8 && < 5
+  - protolude
+  - bytestring
+  - text
+  - Cabal
+
+executables:
+  DayOne:
+    main: DayOne.hs
+    source-dirs: app
+
+tests:
+  spec:
+    cpp-options: -DTEST
+    main: Spec.hs
+    source-dirs:
+      - test
+      - src
+    dependencies:
+      - hspec == 2.*
+      - HUnit >= 1.6.0.0
+      - QuickCheck
+      - temporary
+      - mockery >= 0.3
+      - interpolate
