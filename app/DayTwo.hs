@@ -24,7 +24,10 @@ rowEvenRemainders row = [(a, b) |
     sorted xs = reverse $ sort xs
 
 checksum2 :: [[Int]] -> Int
-checksum2 rows = sum $ map (\(a, b) -> a `div` b) $ concat $ map rowEvenRemainders rows
+checksum2 rows = sum
+  $ map (\(a, b) -> a `div` b)
+  $ concat
+  $ map rowEvenRemainders rows
 
 main :: IO ()
 main = do
