@@ -15,12 +15,23 @@ dependencies:
   - protolude
   - bytestring
   - text
+  - parsec
   - Cabal
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Lib
 
 executables:
   DayOne:
     main: DayOne.hs
     source-dirs: app
+  DayTwo:
+    main: DayTwo.hs
+    source-dirs: app
+    dependencies:
+      - Advent2017
 
 tests:
   spec:
