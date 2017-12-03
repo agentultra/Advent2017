@@ -32,6 +32,9 @@ executables:
     source-dirs: app
     dependencies:
       - Advent2017
+  DayThree:
+    main: DayThree.hs
+    source-dirs: app
 
 tests:
   spec:
