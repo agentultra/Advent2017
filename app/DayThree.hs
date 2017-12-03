@@ -26,10 +26,14 @@ works too. :)
 
 
 distance :: Int -> Int
-distance n = ringN + abs (offset - ringN)
+distance n = ringN + abs (offset - ringN) -- our manhattan distance to
+                                          -- the origin
   where
+    -- our root
     root = ceiling $ sqrt (fromIntegral n)
+    -- the closest odd square
     ring = if root `rem` 2 /= 0 then root else root + 1
+    -- then figure out our offsets to the axis
     ringN = (ring - 1) `div` 2
     cycleR = n - ((ring - 2) ^ 2)
     offset = cycleR `rem` (ring - 1)
