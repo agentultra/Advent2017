@@ -25,10 +25,32 @@ library
     , text
     , parsec
     , Cabal
+    , containers
   exposed-modules:
       Lib
   other-modules:
       Paths_Advent2017
+  default-language: Haskell2010
+
+executable DayFour
+  main-is: DayFour.hs
+  hs-source-dirs:
+      app
+  default-extensions: NoImplicitPrelude
+  ghc-options: -Wall -threaded
+  build-depends:
+      base >= 4.8 && < 5
+    , protolude
+    , bytestring
+    , text
+    , parsec
+    , Cabal
+    , containers
+    , Advent2017
+  other-modules:
+      DayOne
+      DayThree
+      DayTwo
   default-language: Haskell2010
 
 executable DayOne
@@ -44,7 +66,9 @@ executable DayOne
     , text
     , parsec
     , Cabal
+    , containers
   other-modules:
+      DayFour
       DayThree
       DayTwo
   default-language: Haskell2010
@@ -62,7 +86,9 @@ executable DayThree
     , text
     , parsec
     , Cabal
+    , containers
   other-modules:
+      DayFour
       DayOne
       DayTwo
   default-language: Haskell2010
@@ -80,8 +106,10 @@ executable DayTwo
     , text
     , parsec
     , Cabal
+    , containers
     , Advent2017
   other-modules:
+      DayFour
       DayOne
       DayThree
   default-language: Haskell2010
@@ -102,6 +130,7 @@ test-suite spec
     , text
     , parsec
     , Cabal
+    , containers
     , hspec == 2.*
     , HUnit >= 1.6.0.0
     , QuickCheck

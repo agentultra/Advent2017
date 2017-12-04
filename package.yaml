@@ -17,6 +17,7 @@ dependencies:
   - text
   - parsec
   - Cabal
+  - containers
 
 library:
   source-dirs: src
@@ -35,6 +36,11 @@ executables:
   DayThree:
     main: DayThree.hs
     source-dirs: app
+  DayFour:
+    main: DayFour.hs
+    source-dirs: app
+    dependencies:
+      - Advent2017
 
 tests:
   spec:
