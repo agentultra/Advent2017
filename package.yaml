@@ -18,6 +18,7 @@ dependencies:
   - parsec
   - Cabal
   - containers
+  - lens
 
 library:
   source-dirs: src
@@ -38,6 +39,9 @@ executables:
     source-dirs: app
   DayFour:
     main: DayFour.hs
+    source-dirs: app
+  DayFive:
+    main: DayFive.hs
     source-dirs: app
     dependencies:
       - Advent2017

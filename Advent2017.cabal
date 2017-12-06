@@ -26,10 +26,34 @@ library
     , parsec
     , Cabal
     , containers
+    , lens
   exposed-modules:
       Lib
   other-modules:
       Paths_Advent2017
+  default-language: Haskell2010
+
+executable DayFive
+  main-is: DayFive.hs
+  hs-source-dirs:
+      app
+  default-extensions: NoImplicitPrelude
+  ghc-options: -Wall -threaded
+  build-depends:
+      base >= 4.8 && < 5
+    , protolude
+    , bytestring
+    , text
+    , parsec
+    , Cabal
+    , containers
+    , lens
+    , Advent2017
+  other-modules:
+      DayFour
+      DayOne
+      DayThree
+      DayTwo
   default-language: Haskell2010
 
 executable DayFour
@@ -46,8 +70,9 @@ executable DayFour
     , parsec
     , Cabal
     , containers
-    , Advent2017
+    , lens
   other-modules:
+      DayFive
       DayOne
       DayThree
       DayTwo
@@ -67,7 +92,9 @@ executable DayOne
     , parsec
     , Cabal
     , containers
+    , lens
   other-modules:
+      DayFive
       DayFour
       DayThree
       DayTwo
@@ -87,7 +114,9 @@ executable DayThree
     , parsec
     , Cabal
     , containers
+    , lens
   other-modules:
+      DayFive
       DayFour
       DayOne
       DayTwo
@@ -107,8 +136,10 @@ executable DayTwo
     , parsec
     , Cabal
     , containers
+    , lens
     , Advent2017
   other-modules:
+      DayFive
       DayFour
       DayOne
       DayThree
@@ -131,6 +162,7 @@ test-suite spec
     , parsec
     , Cabal
     , containers
+    , lens
     , hspec == 2.*
     , HUnit >= 1.6.0.0
     , QuickCheck
