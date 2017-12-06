@@ -1,4 +1,4 @@
--- This file has been generated from package.yaml by hpack version 0.18.1.
+-- This file has been generated from package.yaml by hpack version 0.14.1.
 --
 -- see: https://github.com/sol/hpack
 
@@ -52,6 +52,7 @@ executable DayFive
   other-modules:
       DayFour
       DayOne
+      DaySix
       DayThree
       DayTwo
   default-language: Haskell2010
@@ -74,6 +75,7 @@ executable DayFour
   other-modules:
       DayFive
       DayOne
+      DaySix
       DayThree
       DayTwo
   default-language: Haskell2010
@@ -96,6 +98,31 @@ executable DayOne
   other-modules:
       DayFive
       DayFour
+      DaySix
+      DayThree
+      DayTwo
+  default-language: Haskell2010
+
+executable DaySix
+  main-is: DaySix.hs
+  hs-source-dirs:
+      app
+  default-extensions: NoImplicitPrelude
+  ghc-options: -Wall -threaded
+  build-depends:
+      base >= 4.8 && < 5
+    , protolude
+    , bytestring
+    , text
+    , parsec
+    , Cabal
+    , containers
+    , lens
+    , Advent2017
+  other-modules:
+      DayFive
+      DayFour
+      DayOne
       DayThree
       DayTwo
   default-language: Haskell2010
@@ -119,6 +146,7 @@ executable DayThree
       DayFive
       DayFour
       DayOne
+      DaySix
       DayTwo
   default-language: Haskell2010
 
@@ -142,6 +170,7 @@ executable DayTwo
       DayFive
       DayFour
       DayOne
+      DaySix
       DayThree
   default-language: Haskell2010
 
@@ -150,7 +179,7 @@ test-suite spec
   main-is: Spec.hs
   hs-source-dirs:
       test
-      src
+    , src
   default-extensions: NoImplicitPrelude
   ghc-options: -Wall -threaded
   cpp-options: -DTEST

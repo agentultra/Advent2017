@@ -45,6 +45,11 @@ executables:
     source-dirs: app
     dependencies:
       - Advent2017
+  DaySix:
+    main: DaySix.hs
+    source-dirs: app
+    dependencies:
+      - Advent2017
 
 tests:
   spec:
