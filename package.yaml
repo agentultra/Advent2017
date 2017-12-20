@@ -12,18 +12,21 @@ default-extensions: NoImplicitPrelude
 
 dependencies:
   - base >= 4.8 && < 5
-  - protolude
+  - protolude >= 0.2
   - bytestring
   - text
   - parsec
   - Cabal
   - containers
   - lens
+  - hspec
+  - HUnit >= 1.6.0.0
 
 library:
   source-dirs: src
   exposed-modules:
     - Lib
+    - Seven
 
 executables:
   DayOne:
@@ -42,6 +45,11 @@ executables:
     source-dirs: app
   DayFive:
     main: DayFive.hs
+    source-dirs: app
+    dependencies:
+      - Advent2017
+  DaySeven:
+    main: DaySeven.hs
     source-dirs: app
     dependencies:
       - Advent2017
