@@ -1,6 +1,8 @@
--- This file has been generated from package.yaml by hpack version 0.18.1.
+-- This file has been generated from package.yaml by hpack version 0.20.0.
 --
 -- see: https://github.com/sol/hpack
+--
+-- hash: a50776c693155267acf5a315555ccdbac6419db6b41da9d009cccc8a028afff6
 
 name:           Advent2017
 version:        0.1.0
@@ -19,16 +21,19 @@ library
   default-extensions: NoImplicitPrelude
   ghc-options: -Wall -threaded
   build-depends:
-      base >= 4.8 && < 5
-    , protolude
+      Cabal
+    , HUnit >=1.6.0.0
+    , base >=4.8 && <5
     , bytestring
-    , text
-    , parsec
-    , Cabal
     , containers
+    , hspec
     , lens
+    , parsec
+    , protolude >=0.2
+    , text
   exposed-modules:
       Lib
+      Seven
   other-modules:
       Paths_Advent2017
   default-language: Haskell2010
@@ -40,20 +45,24 @@ executable DayFive
   default-extensions: NoImplicitPrelude
   ghc-options: -Wall -threaded
   build-depends:
-      base >= 4.8 && < 5
-    , protolude
-    , bytestring
-    , text
-    , parsec
+      Advent2017
     , Cabal
+    , HUnit >=1.6.0.0
+    , base >=4.8 && <5
+    , bytestring
     , containers
+    , hspec
     , lens
-    , Advent2017
+    , parsec
+    , protolude >=0.2
+    , text
   other-modules:
       DayFour
       DayOne
+      DaySeven
       DayThree
       DayTwo
+      Paths_Advent2017
   default-language: Haskell2010
 
 executable DayFour
@@ -63,19 +72,23 @@ executable DayFour
   default-extensions: NoImplicitPrelude
   ghc-options: -Wall -threaded
   build-depends:
-      base >= 4.8 && < 5
-    , protolude
+      Cabal
+    , HUnit >=1.6.0.0
+    , base >=4.8 && <5
     , bytestring
-    , text
-    , parsec
-    , Cabal
     , containers
+    , hspec
     , lens
+    , parsec
+    , protolude >=0.2
+    , text
   other-modules:
       DayFive
       DayOne
+      DaySeven
       DayThree
       DayTwo
+      Paths_Advent2017
   default-language: Haskell2010
 
 executable DayOne
@@ -85,19 +98,50 @@ executable DayOne
   default-extensions: NoImplicitPrelude
   ghc-options: -Wall -threaded
   build-depends:
-      base >= 4.8 && < 5
-    , protolude
+      Cabal
+    , HUnit >=1.6.0.0
+    , base >=4.8 && <5
     , bytestring
-    , text
-    , parsec
-    , Cabal
     , containers
+    , hspec
     , lens
+    , parsec
+    , protolude >=0.2
+    , text
   other-modules:
       DayFive
       DayFour
+      DaySeven
       DayThree
       DayTwo
+      Paths_Advent2017
+  default-language: Haskell2010
+
+executable DaySeven
+  main-is: DaySeven.hs
+  hs-source-dirs:
+      app
+  default-extensions: NoImplicitPrelude
+  ghc-options: -Wall -threaded
+  build-depends:
+      Advent2017
+    , Cabal
+    , HUnit >=1.6.0.0
+    , base >=4.8 && <5
+    , bytestring
+    , containers
+    , hspec
+    , lens
+    , parsec
+    , protolude >=0.2
+    , text
+  other-modules:
+      DayFive
+      DayFour
+      DayOne
+      DayThree
+      DayTwo
+      Paths_Advent2017
   default-language: Haskell2010
 
 executable DayThree
@@ -107,19 +151,23 @@ executable DayThree
   default-extensions: NoImplicitPrelude
   ghc-options: -Wall -threaded
   build-depends:
-      base >= 4.8 && < 5
-    , protolude
+      Cabal
+    , HUnit >=1.6.0.0
+    , base >=4.8 && <5
     , bytestring
-    , text
-    , parsec
-    , Cabal
     , containers
+    , hspec
     , lens
+    , parsec
+    , protolude >=0.2
+    , text
   other-modules:
       DayFive
       DayFour
       DayOne
+      DaySeven
       DayTwo
+      Paths_Advent2017
   default-language: Haskell2010
 
 executable DayTwo
@@ -129,20 +177,24 @@ executable DayTwo
   default-extensions: NoImplicitPrelude
   ghc-options: -Wall -threaded
   build-depends:
-      base >= 4.8 && < 5
-    , protolude
-    , bytestring
-    , text
-    , parsec
+      Advent2017
     , Cabal
+    , HUnit >=1.6.0.0
+    , base >=4.8 && <5
+    , bytestring
     , containers
+    , hspec
     , lens
-    , Advent2017
+    , parsec
+    , protolude >=0.2
+    , text
   other-modules:
       DayFive
       DayFour
       DayOne
+      DaySeven
       DayThree
+      Paths_Advent2017
   default-language: Haskell2010
 
 test-suite spec
@@ -155,20 +207,22 @@ test-suite spec
   ghc-options: -Wall -threaded
   cpp-options: -DTEST
   build-depends:
-      base >= 4.8 && < 5
-    , protolude
-    , bytestring
-    , text
-    , parsec
-    , Cabal
-    , containers
-    , lens
-    , hspec == 2.*
-    , HUnit >= 1.6.0.0
+      Cabal
+    , HUnit >=1.6.0.0
     , QuickCheck
-    , temporary
-    , mockery >= 0.3
+    , base >=4.8 && <5
+    , bytestring
+    , containers
+    , hspec ==2.*
     , interpolate
+    , lens
+    , mockery >=0.3
+    , parsec
+    , protolude >=0.2
+    , temporary
+    , text
   other-modules:
       Lib
+      Seven
+      Paths_Advent2017
   default-language: Haskell2010
